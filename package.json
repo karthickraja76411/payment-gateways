@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsup && tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },
   "keywords": [
     "payment",
@@ -44,5 +45,13 @@
   "license": "MIT",
   "engines": {
     "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karthickraja76411/payment-gateways.git"
+  },
+  "author": "Karthick Raja <davidjkej@gmail.com>",
+  "publishConfig": {
+    "access": "public"
   }
 }
